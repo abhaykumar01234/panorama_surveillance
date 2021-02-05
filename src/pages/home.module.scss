@@ -1,0 +1,136 @@
+.sideMenu {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .menuWrapper {
+    background: #192435;
+    transform-origin: 0 0;
+    transform: rotate(-90deg) translateX(-50%);
+
+    button {
+      border: none;
+      outline: none;
+      padding: 0.25rem 1.25rem;
+      background: transparent;
+      color: #a6a4a6;
+      margin: 0 0.1rem;
+      box-shadow: 0 0 1px 0 #a6a4a6;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0% 1fr 20%;
+  gap: 1rem;
+  // transition: all 5s;
+
+  .reportList {
+    padding-left: 1.25rem;
+    font-size: 0.65rem;
+    opacity: 0;
+  }
+
+  &.withReport {
+    grid-template-columns: 25% 1fr 20%;
+
+    .reportList {
+      opacity: 1;
+    }
+  }
+}
+
+.reportList {
+  .rowBw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0.5rem;
+    border-bottom: 1px solid #111f3f;
+
+    big {
+      font-size: 1rem;
+      font-weight: 450;
+    }
+  }
+
+  .link {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #496ba0;
+    margin: 0 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.reportTable {
+  overflow-y: scroll;
+  max-height: 70vh;
+
+  table {
+    width: 100%;
+  }
+
+  .tableHeading td {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #111f3f;
+  }
+
+  td {
+    padding: 0.1rem;
+  }
+
+  td.tick {
+    font-size: 1.25rem;
+    color: #4c8619;
+  }
+
+  .reportRow:hover {
+    background-color: #151b3c;
+  }
+}
+
+.mainTable {
+  overflow: scroll;
+  max-height: 90vh;
+
+  table {
+    th,
+    td {
+      padding: 0.25rem 0.5rem;
+    }
+    tbody {
+      tr:nth-of-type(2n + 1) {
+        background-color: #151b3c;
+      }
+    }
+  }
+}
+
+.filterBox {
+  overflow-y: scroll;
+  max-height: 90vh;
+  p {
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+.filterInput {
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.75rem;
+  color: #fff;
+  border-bottom: 1px solid #111f3f;
+  margin-bottom: 0.75rem;
+}

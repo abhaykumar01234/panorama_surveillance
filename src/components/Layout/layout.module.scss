@@ -1,0 +1,35 @@
+.parent {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #020e34, #010001);
+  color: #a6a4a6;
+
+  & > * {
+    padding: 0.25rem 1rem;
+  }
+
+  & > header {
+    font-weight: 450;
+  }
+
+  & > main {
+    position: relative;
+    font-size: 0.8rem;
+  }
+
+  & > footer {
+    color: #a6a4a6;
+    background: #010001;
+    font-size: 0.75rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    big {
+      font-size: 1.25rem;
+      letter-spacing: 0.7rem;
+      font-weight: bold;
+    }
+  }
+}
